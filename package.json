@@ -8,6 +8,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "cd client && npm install && npm run build"
   },
+  "engines": {
+    "node": "8.6.0"
+  },
   "dependencies": {
     "concurrently": "^3.6.0",
     "cookie-parser": "^1.4.3",
