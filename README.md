@@ -1,4 +1,4 @@
-# The-Idea-Launchpad
+# The Idea Launchpad
 
 Where Ideas are Distributed 
 
