@@ -25,7 +25,8 @@ body{
     perspective: 1px;
 }
 .Intro-words{
-    padding: .33em;
+    /* border:solid  orange; */
+    padding: .5em;
     font-family: 'Cabin', sans-serif;
     width: 100%;
     position: relative;
@@ -39,16 +40,16 @@ body{
 }
 .Intro-words h1 div:nth-child(1){
     display: inline-block;
-    animation: fadeInUp 1.4s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    animation: fadeInUp 2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 .Intro-words h1 div:nth-child(2){
-    animation: fadeInUp 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    animation: fadeInUp 2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 .Intro-words h1 div:nth-child(3){
-    animation: fadeInUp 1.6s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    animation: fadeInUp 2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 .Intro-words h1 div:nth-child(4){
-    animation: fadeInUp 1.7s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    animation: fadeInUp 2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 
 }
 .Intro-words h1 div:nth-child(5){
@@ -57,10 +58,10 @@ body{
     transition-delay: 5s;
     }
 .Intro-words h1 div:nth-child(6){
-    animation: fadeInUp 1.8s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    animation: fadeInUp 2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 .Intro-words h1 div:nth-child(7){
-    animation: fadeInUp 1.9s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    animation: fadeInUp 2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 @keyframes fadeIn {
     from {
@@ -95,8 +96,8 @@ to {
 }
 }
 .parallax-container{
-    border: solid #0bafaf;
-    height:60vh;
+    /* border: solid #0ccfcc; */
+    height:75vh;
 }
 #background-video{
     top: -200px;
@@ -110,13 +111,33 @@ to {
     animation: fadeIn 2s ease-in;
 }
 .Description-Container{
+    justify-content: space-around;
+    display: flex;
+    width: 100vw;
     background-color:#0bafaf;
     font-family: 'Cabin', sans-serif;
-    /* display: inline-block; */
+    display:flex;
     text-align: justify;
-    border: solid red;
+    /* border: solid red; */
     height: 100vh;
     color: white;
     font-size: 1.33333vw;
-    line-height: 5.2vw;
+    line-height: 1.5;
+}
+.Description{
+    padding: 10px;
+    margin: auto auto auto auto; 
+    /* border: solid; */
+    width: 45vw;
+    height: auto;
+    display: inline-block;
+}
+.Description-picture{
+    padding: 5px;
+    margin: 6rem 0 0 0; 
+    /* border: solid; */
+    width: 50%;
+    background-image: url(../images/workdesk.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
 }
