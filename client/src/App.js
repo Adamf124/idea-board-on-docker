@@ -7,6 +7,7 @@ class App extends Component {
     return (
       <Router>
         <Route exact path="/" component={Dashboard} />
+        <Route path="/login" component={LogInPage}/>
       </Router>
         );
       }
