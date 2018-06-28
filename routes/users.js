@@ -1,9 +1,20 @@
 var express = require('express');
+const { UserModel } = require('../db/schema')
 var router = express.Router();
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+  UserModel.find().then((users) => {
+    res.send({
+      users
+    })
+  });
 });
 
+router.post('/', (req, res) => {
+  const newUser = new UserModel(req.body)
+  newUser.save().then((user) => {
+    res.send(user)
+  })
+})
 module.exports = router;
