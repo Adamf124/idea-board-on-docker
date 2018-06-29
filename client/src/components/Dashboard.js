@@ -9,8 +9,8 @@ class Dashboard extends Component {
       <div className="App">
       {/* // content container */}
         <div className="main-container">
-          <div className="Main-title">Reachspace: An Idea Launchpad</div>
           <div className="Intro-words">
+          <div className="Main-title">Reachspace: An Idea Launchpad</div>
             <h1>
               <div>Where</div> <div>ideas</div> <div>come</div> <div>to</div> <div>reach</div> <div>their</div> <div>platform.</div>
             </h1>
@@ -21,6 +21,7 @@ class Dashboard extends Component {
             <source src={drawingboard} type="video/mp4" />
           </video>
         </div>
+        <button className='button'>Button</button>
         <div className="Description-Container">
           <div className="Description">
             <h1>We are in the business of spreading ideas.</h1>
