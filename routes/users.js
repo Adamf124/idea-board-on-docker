@@ -5,7 +5,7 @@ var router = express.Router();
 /* GET users listing. */
 router.get('/', function(req, res, next) {
   UserModel.find().then((users) => {
-    res.send({
+    res.json({
       users
     })
   });
@@ -14,7 +14,7 @@ router.get('/', function(req, res, next) {
 router.post('/', (req, res) => {
   const newUser = new UserModel(req.body)
   newUser.save().then((user) => {
-    res.send(user)
+    res.json(user)
   })
 })
 module.exports = router;
