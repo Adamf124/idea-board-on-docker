@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import '../css/Dashboard.css';
 import drawingboard from '../StockVideos/mandrawingboard.mp4';
 import 'bulma/css/bulma.css'
+// eslint-disable-next-line
 import { Link, Switch, BrowserRouter as Router, Route } from 'react-router-dom'
 
 class Dashboard extends Component {
