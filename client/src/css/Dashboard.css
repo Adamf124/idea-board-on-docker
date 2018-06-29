@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Cabin|Rubik');
-@import url(./bulma.css);
+
 
 body{
     margin: 0px;
@@ -101,7 +101,7 @@ to {
     height:75vh;
 }
 .button{
-    
+    color: #0bafaf;
 }
 #background-video{
     top: -250px;

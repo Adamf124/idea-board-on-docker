@@ -21,7 +21,7 @@ class Dashboard extends Component {
             <source src={drawingboard} type="video/mp4" />
           </video>
         </div>
-        <button className='button'>Button</button>
+        <button className='signup-button'>Sign Up</button>
         <div className="Description-Container">
           <div className="Description">
             <h1>We are in the business of spreading ideas.</h1>
