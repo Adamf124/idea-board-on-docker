@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Cabin|Rubik');
+@import url(./bulma.css);
 
 body{
     margin: 0px;
@@ -8,16 +9,6 @@ body{
     margin: 0;  
     height:100%;
 }
-.Main-title{
-    margin: 15px 0 0 0;
-    position: relative;
-    text-align: center;
-    font-family: 'Rubik', sans-serif;
-    color:#0bafaf;
-    font-size: 4em;
-    animation: fadeInDown 2s cubic-bezier(0.23, 1, 0.320, 1);
-    
-}
 .main-container{
     transform-style: preserve-3d;
     height: 100vh;
@@ -25,18 +16,28 @@ body{
     perspective: 1px;
 }
 .Intro-words{
+    text-align: center;
     /* border:solid  orange; */
     padding: .5em;
     font-family: 'Cabin', sans-serif;
     width: 100%;
     position: relative;
-    margin: 75px 0 25px 0;
+    margin: 150px 0 0px 0;
     z-index: 1;
 }
-.Intro-words div{
+.Intro-words h1 div{
     font-size: 64px;
     color: white;
     display: inline-block;
+}
+.Main-title{
+    margin: 25px 0 0 0;
+    position: relative;
+    text-align: center;
+    font-family: 'Rubik', sans-serif;
+    color:#0bafaf;
+    font-size: 4em;
+    animation: fadeInDown 2s cubic-bezier(0.23, 1, 0.320, 1); 
 }
 .Intro-words h1 div:nth-child(1){
     display: inline-block;
@@ -99,8 +100,11 @@ to {
     /* border: solid #0ccfcc; */
     height:75vh;
 }
+.button{
+    
+}
 #background-video{
-    top: -200px;
+    top: -250px;
     left:1rem;
     width: 100%;
     height: auto;
