@@ -31,9 +31,9 @@ class Dashboard extends Component {
               <p> Catering to the creative community and enhancing your ability to distribute your ideas and proposals, Reachspace will offer a quick way to create and distribute your brilliance. </p>
 
             <div className='button-container'>
-                <div className='signup-button'>
-                  <button class="button is-link is-inverted">Sign Up</button>
-                </div>
+                <Link to='/signup'><div className='signup-button'>
+                <button class="button is-link is-inverted">Sign Up</button>
+                </div></Link>
                 <div className='login-button'>
                   <Link to='/login'><button class="button is-link is-inverted">Log-in</button></Link>
                 </div>
