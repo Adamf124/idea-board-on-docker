@@ -14,12 +14,6 @@ class LogInPage extends Component {
           this.setState({users: res.data.users})
         })
     }
-    // listAllUsers = () => {
-    //     axios.get(`localhost:3001/api/users`)
-    //     .then(res => {
-    //       this.setState({users: res.data})
-    //     })
-    //   }
 
       render () {
         return (
