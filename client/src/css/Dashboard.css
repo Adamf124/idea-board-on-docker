@@ -3,9 +3,9 @@
 
 body{
     margin: 0px;
-    background: #0a0a0a;
 }
 .App {
+    background: #0a0a0a;
     margin: 0;  
     height:100%;
 }
