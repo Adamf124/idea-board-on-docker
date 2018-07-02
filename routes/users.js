@@ -26,13 +26,6 @@ router.post('/', (req, res) => {
   })
 })
 
-// // EDIT Route
-// router.get('/:id/edit', (req, res) => {
-//   UserModel.findById(req.params.id)
-//     .then((editUser) => {
-//       res.json(editUser)
-//     })
-// })
 
 
 // UPDATE Route
