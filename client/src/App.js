@@ -5,7 +5,6 @@ import Dashboard from './components/Dashboard'
 import LogInPage from './components/LogInPage'
 import SignUpPage from './components/SignUpPage'
 import UserPage from './components/UserPage'
-import EditPage from './components/EditPage';
 class App extends Component {
   render() {
     return (
@@ -15,7 +14,6 @@ class App extends Component {
         <Route path="/login" component={LogInPage}/>
         <Route path="/signup" component={SignUpPage}/>
         <Route path='/user/:id' component={UserPage}/>
-        {/* <Route path={`/user/${match.params.id}/edit`} component={EditPage}/> */}
         </Switch>
       </Router>
         );
