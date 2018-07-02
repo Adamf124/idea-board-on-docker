@@ -24,7 +24,7 @@ class LogInPage extends Component {
               return (<div><Link to={`/user/${user._id}`}>{user.username}</Link></div>)
             })}
           </div>
-        )
+        ) 
       }
     }
     
