@@ -1,5 +1,5 @@
 var express = require('express');
-const { UserModel } = require('../db/schema.js')
+const { UserModel } = require('../db/schema')
 var router = express.Router();
 
 /* GET users listing. */
