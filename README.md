@@ -1,4 +1,4 @@
-# The Idea Launchpad
+# Reachspace - The Idea Launchpad
 
 Where Ideas are Distributed 
 
@@ -37,7 +37,7 @@ npm run dev
 
 This app is deployed on Heroku.
 
-You can find it [here]()
+You can find it [here](https://sleepy-journey-36817.herokuapp.com/)
 
 ## Built With
 
