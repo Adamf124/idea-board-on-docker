@@ -32,10 +32,10 @@ class Dashboard extends Component {
 
             <div className='button-container'>
                 <Link to='/signup'><div className='signup-button'>
-                <button class="button is-link is-inverted">Sign Up</button>
+                <button className="button is-link is-inverted">Sign Up</button>
                 </div></Link>
                 <div className='login-button'>
-                  <Link to='/login'><button class="button is-link is-inverted">Log-in</button></Link>
+                  <Link to='/login'><button className="button is-link is-inverted">Log-in</button></Link>
                 </div>
             </div >
           </div>
