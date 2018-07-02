@@ -1,0 +1,7 @@
+.login-container{
+    background-color: rgba(0, 0, 0, .01);
+    width: 35vw;
+    border:solid rgba(0, 0, 0, .03);
+    margin: 10% auto;
+    padding: 5px;
+}

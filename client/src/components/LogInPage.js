@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
-
+import '../css/LogInPage.css'
 
 class LogInPage extends Component {
     state = {
@@ -18,11 +18,13 @@ class LogInPage extends Component {
       render () {
         return (
           <div>
+            <div className="login-container card">
             <h1>Log-In</h1>
             <h3>Please Select YOURSELF</h3>
             {this.state.users.map(user => {
-              return (<div><Link to={`/user/${user._id}`}>{user.username}</Link></div>)
+              return (<div><Link to={`/user/${user._id}`}>{user.name + ' - ' + user.username}</Link></div>)
             })}
+            </div>
           </div>
         ) 
       }
