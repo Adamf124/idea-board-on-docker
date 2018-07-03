@@ -1,4 +1,4 @@
-# The Idea Launchpad
+# Reachspace - The Idea Launchpad
 
 Where Ideas are Distributed
 
