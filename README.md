@@ -4,6 +4,13 @@ Where Ideas are Distributed
 
 ## Getting Started
 
+
+## Wireframe
+![pic](/public/images/wireframe.jpeg)
+
+## ERD
+![pic](/public/images/erd.jpeg)
+
 You can find my trello [here](https://trello.com/b/A07vRyiM)
 
 Clone the repo down from Github and open it in your local text editor.
