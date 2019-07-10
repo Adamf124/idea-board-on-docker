@@ -9,6 +9,7 @@ services:
       - ./data/:/data/db
       ports:
       - 27017:27017
+      # to access CLI `docker exec -it mongo-server mongo`
   idea-launchpad:
     image:  idea-launchpad:latest
     # container_name: docker-app-server
