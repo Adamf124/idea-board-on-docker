@@ -36,8 +36,7 @@ app.use('/', indexRouter);
 app.use('/api/users', usersRouter);
 app.listen(port);
 
-console.log('Server is running on port ' + port)
-console.log("You're all set Space Cowboy")
+console.log("You're all set Space Cowboy...Server is running on port " + port)
 
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/client/build/index.html')
