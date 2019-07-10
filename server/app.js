@@ -31,7 +31,7 @@ app.use(express.urlencoded({
     extended: false
 }));
 app.use(cookieParser());
-app.use(express.static(__dirname + '/client/build/'))
+app.use(express.static(__dirname + '/public'))
 app.use('/', indexRouter);
 app.use('/api/users', usersRouter);
 app.listen(port);
