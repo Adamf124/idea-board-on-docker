@@ -15,9 +15,9 @@ const usersRouter = require('./routes/users');
 
 
 
-mongoose.connect(process.env.MONGODB_URI, {
-    useNewUrlParser: true
-});
+// mongoose.connect(process.env.MONGODB_URI, {
+//     useNewUrlParser: true
+// });
 
 const connection = mongoose.connection;
 connection.on('connected', () => {
@@ -27,7 +27,7 @@ connection.on('connected', () => {
 });
 connection.on('error', (err) => {
     console.log('!!!!!!!! ALERT !!!!!!!!!!')
-    console.log('Mongoose default connection error: ' + err);
+    console.log('Mongoose connection error: ' + err);
 });
 
 port = process.env.PORT || 4000;

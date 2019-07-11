@@ -6,7 +6,7 @@ services:
       restart: always
       # command: mongod --noauth --smallfiles
       volumes:
-      - ./data/:/data/db
+      - mongo-server:/data/db
       ports:
       - 27017:27017
       # to access CLI `docker exec -it mongo-server mongo`
@@ -16,7 +16,12 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    depends_on:
+      - "mongo-server"
     ports:
     - "8080:4000"
     environment:
       PORT: "4000"
+      MONGODB_URI: MONGODB_URI=mongodb://mongo-server:27017/idea-launchpad
+volumes:
+  mongo-server:
