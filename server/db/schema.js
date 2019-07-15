@@ -1,4 +1,7 @@
+require('dotenv').config()
 const mongoose = require('mongoose')
+mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true })
+
 const Schema = mongoose.Schema
 
 const ProjectSchema = new Schema({
@@ -28,9 +31,13 @@ const UserSchema = new Schema({
 
 })
 
-const UserModel = mongoose.model('User', UserSchema)
-const ProjectModel = mongoose.model('Project', ProjectSchema)
+const User = mongoose.model('User', UserSchema)
+const Project = mongoose.model('Project', ProjectSchema)
+
 module.exports = {
-  UserModel,
-  ProjectModel
+  User,
+  Project
 }
+
+
+console.log('Your schema has been read')

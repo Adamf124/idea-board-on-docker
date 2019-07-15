@@ -1,30 +1,32 @@
 var express = require('express');
 const {
-  UserModel
+  User
 } = require('../db/schema')
 var router = express.Router();
 
 /* GET users listing. */
-router.get('/', function (req, res, next) {
-  UserModel.find()
-    .then((users) => {
-      res.json({
-        users
-      })
-    });
-});
+router.get('/', (req, res) => {
+  User.find({})
+  .then(users => {
+    res.json(users)
+  })
+  .catch((err) => console.log(err))
+})
 // SHOW Route
-router.get('/:id', (req, res) => {
-  UserModel.findById(req.params.id)
+router.get('/user/:id', (req, res) => {
+  User.findById(req.params.id)
     .then((individualUser) => {
-      res.json(individualUser)
+      res.json('user/show',{
+        individualUser: individualUser
+      })
       console.log(individualUser)
     })
 })
 // CREATE Route
 router.post('/', (req, res) => {
-  const newUser = new UserModel(req.body)
-  newUser.save().then((user) => {
+  const newUser = new User(req.body)
+  newUser.save()
+  .then((user) => {
     res.json(user)
   })
 })
@@ -32,11 +34,11 @@ router.post('/', (req, res) => {
 
 
 // UPDATE Route
-router.put('/:id', async (req, res) => {
+router.put('/user/:id/edit', async (req, res) => {
   console.log(req.params)
   const userId = req.params.id
   const updatedUserId = req.body
-  const saveUser = await UserModel.findByIdAndUpdate(userId, updatedUserId, {
+  const saveUser = await User.findByIdAndUpdate(userId, updatedUserId, {
     new: true
   })
   res.send({
@@ -48,7 +50,7 @@ router.put('/:id', async (req, res) => {
 router.delete('/:id', (req, res) => {
   const savedUserId = req.params.id
   console.log(savedUserId.name + " is deleted")
-  UserModel.findByIdAndRemove(savedUserId).then(() => {
+  User.findByIdAndRemove(savedUserId).then(() => {
       res.send({
         msg: 'poof'
       })
