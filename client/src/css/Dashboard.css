@@ -1,22 +1,25 @@
 @import url('https://fonts.googleapis.com/css?family=Cabin|Rubik');
 
 
-body{
+body {
     margin: 0px;
 }
+
 .App {
     background: #0a0a0a;
-    margin: 0;  
-    height:100%;
+    margin: 0;
+    height: 100%;
 }
-.main-container{
+
+.main-container {
     transform-style: preserve-3d;
     height: 100vh;
     overflow-x: hidden;
     overflow-y: scroll;
     perspective: 1px;
 }
-.Intro-words{
+
+.Intro-words {
     text-align: center;
     /* border:solid  orange; */
     padding: .5em;
@@ -26,137 +29,158 @@ body{
     margin: 150px 0 0px 0;
     z-index: 1;
 }
-.Intro-words h1 div{
+
+.Intro-words h1 div {
     padding: 5px;
     font-size: 64px;
     color: white;
     display: inline-block;
 }
-.Main-title{
+
+.Main-title {
     margin: 25px 0 0 0;
     position: relative;
     text-align: center;
     font-family: 'Rubik', sans-serif;
-    color:#00d1b2;
+    color: #00d1b2;
     font-size: 4em;
-    animation: fadeInDown 2s cubic-bezier(0.23, 1, 0.320, 1); 
+    animation: fadeInDown 2s cubic-bezier(0.23, 1, 0.320, 1);
 }
-.Intro-words h1 div:nth-child(1){
+
+.Intro-words h1 div:nth-child(1) {
     display: inline-block;
     animation: fadeInUp 2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
-.Intro-words h1 div:nth-child(2){
+
+.Intro-words h1 div:nth-child(2) {
     animation: fadeInUp 2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
-.Intro-words h1 div:nth-child(3){
+
+.Intro-words h1 div:nth-child(3) {
     animation: fadeInUp 2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
-.Intro-words h1 div:nth-child(4){
+
+.Intro-words h1 div:nth-child(4) {
     animation: fadeInUp 2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 
 }
-.Intro-words h1 div:nth-child(5){
+
+.Intro-words h1 div:nth-child(5) {
     color: rgb(22, 11, 175);
     animation: fadeInUp 2.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
     transition-delay: 5s;
-    }
-.Intro-words h1 div:nth-child(6){
-    animation: fadeInUp 2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-}
-.Intro-words h1 div:nth-child(7){
-    animation: fadeInUp 2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-}
-@keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-  
-      to {
-      opacity: 1;
-    }
-  }
-@keyframes fadeInDown {
-    from {
-      opacity: 0;
-      -webkit-transform: translate3d(0, -100%, 0);
-      transform: translate3d(0, -100%, 0);
-    }
-  
-    to {
-      opacity: 1;
-      -webkit-transform: translate3d(0, 0, 0);
-      transform: translate3d(0, 0, 0);
-    }
-  }
-  
-@keyframes fadeInUp {
-from {
-    transform: translate3d(0, 100%, 0);
-    opacity:0;
-}
-to {
-    opacity:1;
-}
-}
-.parallax-container{
-    /* border: solid orange; */
-    height:75vh;
 }
 
-#background-video{
-    top: -250px;
-    left:1rem;
-    width: 100%;
-    height: auto;
+.Intro-words h1 div:nth-child(6) {
+    animation: fadeInUp 2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+.Intro-words h1 div:nth-child(7) {
+    animation: fadeInUp 2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translate3d(0, 100%, 0);
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.parallax-container {
+    border: solid orange;
+    height: 75vh;
+}
+
+#background-video {
+    border:solid orange;
+    display: flex;
+    /* top: -250px; */
+    /* left: 1rem; */
+    /* width: 100%; */
+    /* height: auto; */
     position: relative;
     z-index: -1;
-/* background: url('/StockVideos/mandrawingboard.mp4'); */
-    transform: translateZ(-1px) scale(1.5);  
+    /* background: url('/StockVideos/mandrawingboard.mp4'); */
+    transform: translateZ(-1px) scale(1.5);
     animation: fadeIn 2s ease-in;
 }
 
-.Description-Container{
-    justify-content: space-around;
+.Description-Container {
+    /* justify-content: space-around; */
     display: flex;
-    width: 100vw;
-    background-color:#00d1b2;
+    /* width: 100vw; */
+    background-color: #00d1b2;
     text-align: center;
     /* border: solid red; */
     height: 100vh;
     color: white;
     line-height: 1.5;
 }
-.Description h1{
+
+.Description h1 {
     font-family: 'Cabin', sans-serif;
     font-size: 2.33333em;
-    
+
 }
-.Description{
+
+.Description {
     font-size: 1.3em;
     font-family: 'Cabin', sans-serif;
     padding: 10px;
-    margin: 175px auto auto auto; 
-        width: 45vw;
+    margin: 175px auto auto auto;
+    width: 45vw;
     height: auto;
     /* border: solid red; */
 }
-.button-container{
+
+.button-container {
     justify-content: center;
     /* border:solid red; */
     display: flex;
 }
-.signup-button{
+
+.signup-button {
     margin: 1rem;
     /* border: solid 3px black; */
-   
+
 }
-.login-button{
+
+.login-button {
     margin: 1rem;
     /* border: solid 3px lemonchiffon; */
 }
-.Description-picture{
+
+.Description-picture {
     padding: 5px;
-    margin: 6rem auto; 
+    margin: 6rem auto;
     /* border: solid; */
     width: 50%;
     background-image: url(../images/workdesk.jpg);

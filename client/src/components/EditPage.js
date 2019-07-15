@@ -39,79 +39,69 @@ import { Link, Switch, BrowserRouter as Router, Route } from 'react-router-dom'
     render() {
     return (
       <div>
-              <div>
-          <div></div>
-         <div class="page-container">
-  <div className="form-container">
-  <h1>Edit a User</h1>
-  <form onSubmit={this.handleSubmit}>
-  
-  <div className="field">
-  <h3 class="label">Name</h3>
-    <input 
-    class="input"
-    placeholder="Full Name"
-    name="name"
-    type="text"
-    value={this.state.name}
-    onChange={this.handleChange}
-    />
-  </div>
+          <div class="page-container">
+            <div className="form-container">
+              <h1>Edit a User</h1>
+              <form onSubmit={this.handleSubmit}>
+                
+                <div className="field">
+                  <h3 class="label">Name</h3>
+                  <input 
+                    class="input"
+                    placeholder="Full Name"
+                    name="name"
+                    type="text"
+                    value={this.state.name}
+                    onChange={this.handleChange}/>
+                </div>
 
-  <div className="field">
-  <h3 class="label">Username</h3>
-    <input 
-      class="input"
-      placeholder="Enter Username"
-      type="text"
-      name="username"
-      value={this.state.username}
-      onChange={this.handleChange}
-    />
-    </div>
+                <div className="field">
+                  <h3 class="label">Username</h3>
+                  <input 
+                    class="input"
+                    placeholder="Enter Username"
+                    type="text"
+                    name="username"
+                    value={this.state.username}
+                    onChange={this.handleChange}/>
+                </div>
 
-    <div className="field">
-    <h3 class="label">Password</h3>
-    <input 
-      class="input"
-      placeholder="Enter Password"
-      type="password"
-      name="password"
-      value={this.state.password}
-      onChange={this.handleChange}
-    />
-    </div>
+                <div className="field">
+                  <h3 class="label">Password</h3>
+                  <input 
+                    class="input"
+                    placeholder="Enter Password"
+                    type="password"
+                    name="password"
+                    value={this.state.password}
+                    onChange={this.handleChange}/>
+                </div>
 
-    <div className="field">
-    <h3 class="label">Email Address</h3>
-    <input 
-      class="input" 
-      placeholder="Enter Valid Email Address"
-      type="email"
-      name="email_address"
-      value={this.state.email_address}
-      onChange={this.handleChange}
-    />
-    </div>
+                <div className="field">
+                  <h3 class="label">Email Address</h3>
+                  <input 
+                    class="input" 
+                    placeholder="Enter Valid Email Address"
+                    type="email"
+                    name="email_address"
+                    value={this.state.email_address}
+                    onChange={this.handleChange}/>
+                </div>
 
-    <div class="field is-grouped">
-  <p class="control">
-    <button type='submit' class="button is-primary">
-      Submit
-    </button>
-  </p>
-  <p class="control">
-    <Link to="/user/:id">
-    <a class="button is-light">
-      Cancel</a>
-    </Link>
-  </p>
-</div>
-  </form>
-      </div>
-  </div>
-      </div>
-      </div>
+                <div class="field is-grouped">
+                    <p class="control">
+                    <button type='submit' class="button is-primary">Submit</button>
+                    </p>
+                    <p class="control">
+                    <Link to="/user/:id">
+                    <a class="button is-light">Cancel</a>
+                    </Link>
+                    </p>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
     )
   }
 }

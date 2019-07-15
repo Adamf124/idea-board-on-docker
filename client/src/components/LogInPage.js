@@ -11,7 +11,7 @@ class LogInPage extends Component {
          axios.get('/api/users')
          .then(res => {
             console.log(res.data)
-          this.setState({users: res.data.users})
+          this.setState({users: res.data})
         })
     }
 

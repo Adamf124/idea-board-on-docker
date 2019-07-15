@@ -15,14 +15,19 @@ class Dashboard extends Component {
           <div className="Intro-words">
             <div className="Main-title">Reachspace: An Idea Launchpad</div>
             <h1>
-              <div>Where</div> <div>ideas</div> <div>come</div> <div>to</div> <div>reach</div> <div>their</div> <div>platform.</div>
+              <div>Where</div> 
+              <div>ideas</div> 
+              <div>come</div> 
+              <div>to</div> 
+              <div>reach</div> 
+              <div>their</div>
+              <div>platform.</div>
             </h1>
           </div>
           {/* parallax video */}
         <div className="parallax-container">
-          <video id="background-video" loop autoPlay>
-            <source src={drawingboard} type="video/mp4" />
-          </video>
+          {/* <video id="background-video" loop autoPlay src={drawingboard} type="video/mp4"/>> */}
+          
         </div>
         
         <div className="Description-Container">
@@ -39,7 +44,7 @@ class Dashboard extends Component {
                 </div>
             </div >
           </div>
-        <div className="Description-picture"></div>  
+        <div className="Description-picture"></div> 
         </div>
       </div>
       </div>
