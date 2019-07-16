@@ -5,21 +5,13 @@ mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true })
 const Schema = mongoose.Schema
 
 const ProjectSchema = new Schema({
-  projectTitle: {
+  title: {
     type: String,
     default: 'New Title'
   },
-  projectDescription: {
+  description: {
     type: String,
     default: 'New Description'
-  },
- projectObjective: {
-   type: String,
-   default: 'New Objectives'
-  },
-  projectTimeline: {
-    type: String, 
-    default: 'Set Up A Timeline'
   }
 })
 
