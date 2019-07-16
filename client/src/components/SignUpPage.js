@@ -25,9 +25,10 @@ class SignupPage extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault()
-    axios.post('/api/users', this.state).then((res) => {
+    axios.post('/api/users', this.state)
+    .then((res) => {
       console.log(res.data)
-      this.props.history.push(`/users/${res.data._id}`)
+      this.props.history.push(`/login`)
     })
 }
 

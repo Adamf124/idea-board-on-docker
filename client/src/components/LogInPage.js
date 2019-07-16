@@ -22,7 +22,10 @@ class LogInPage extends Component {
             <h1>Log-In</h1>
             <h3>Please Select YOURSELF</h3>
             {this.state.users.map(user => {
-              return (<div><Link to={`/user/${user._id}`}>{user.name + ' - ' + user.username}</Link></div>)
+              return (
+              <div>
+                <Link to={`/user/${user._id}`}>{user.name + ' - ' + user.username}</Link>
+                </div>)
             })}
             </div>
           </div>
