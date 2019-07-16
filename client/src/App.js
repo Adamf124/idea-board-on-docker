@@ -5,6 +5,10 @@ import Dashboard from './components/Dashboard'
 import LogInPage from './components/LogInPage'
 import SignUpPage from './components/SignUpPage'
 import UserPage from './components/UserPage'
+import IdeaView from './components/IdeaView';
+
+
+
 class App extends Component {
   render() {
     return (
@@ -13,7 +17,7 @@ class App extends Component {
         <Route exact path="/" component={Dashboard} />
         <Route path="/login" component={LogInPage}/>
         <Route path="/signup" component={SignUpPage}/>
-        <Route path='/user/:id' component={UserPage}/>
+        <Route path='/user/:id' component={IdeaView}/>
         </Switch>
       </Router>
         );
