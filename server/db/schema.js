@@ -11,7 +11,7 @@ const ProjectSchema = new Schema({
   },
   description: {
     type: String,
-    default: 'Describe it!'
+    default: 'This idea is in the database!'
   }
 })
 

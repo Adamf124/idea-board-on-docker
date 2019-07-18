@@ -1,44 +1,65 @@
 import React, { Component } from 'react'
 import 'bulma/css/bulma.css'
 import axios from 'axios'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 class IdeaView extends Component {
-  state = {
-    user: {
-      userName: 'adam'
-    },
-    projects: [{
-      id: 1,
-      title: 'hello',
-      description: 'world'
-    }, {
-      id: 2,
-      title: 'hola',
-      description: 'mundo'
-    }, {
-      id: 3,
-      title: 'goodnight',
-      description: 'moon'
-    }, {
-      id: 4,
-      title: 'greetings',
-      description: 'earthlings'
-    }]
+  constructor(props) {
+    super(props);
+    this.state = {
+      user: {
+        userName: 'adam'
+      },
+      projects: [{
+        id: 1,
+        title: 'hello',
+        description: 'world'
+      }]
+    }
+  }
+  
+  componentWillMount () {
+    if (this.props.match.params) {
+      const userId = this.props.match.params.id
+      console.log(userId)
+
+      axios.get(`/api/users/${userId}`)
+      .then(res => {
+        
+        const projects = res.data.projects
+        const user = {
+          _id: res.data._id,
+          userName: res.data.userName,
+          projects: projects,
+        }
+        console.log(res.data.projects)
+        this.setState({user, projects})
+      })
+    }
+  }
+  createProject = () => {
+      console.log('something ')
+      const userId  = this.props.match.params.id
+    axios.post(`/api/users/${userId}`)
+    .then(res => {
+      console.log(this.state.user.project)
+      const newProjects = this.state.user.projects
+      newProjects.unshift(res.data)
+      this.setState({projects: newProjects})
+    })
   }
 
   render () {
     return (
       <div>
         <div>
-          <h1>{this.state.user.userName}'s Idea Board</h1>
-          <button className='button is-primary'>New Idea</button>
+          <h1>{this.state.user.userName}'s Project Board</h1>
+          <button onClick={this.createProject} className='button is-primary'>New Project</button>
         </div>
         <div>
-          {this.state.projects.map( project => {
+          {this.state.projects.map( (project, i) => {
               return (
-                    <div className='column is-one-third'>
-                      <div className="card">
+                    <div className='column is-one-third' key={i}>
+                      <div className="card" >
                         <header className="card-header">
                           <p className="card-header-title">{project.title}</p>
                           <a href="#" className="card-header-icon" aria-label="more options">
@@ -48,13 +69,11 @@ class IdeaView extends Component {
 
                         <div className="card-content">
                         <div className="content">{project.description}
-                            <a href="#">@bulmaio</a>. <a href="#">#css</a> <a href="#">#responsive</a>
                             <br/>
-                            <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                            <time dateTime="2016-1-1">11:09 PM - 1 Jan 2016</time>
                         </div>
                         </div>
                         <footer className="card-footer">
-                          <a href="#" className="card-footer-item">Save</a>
                           <a href="#" className="card-footer-item">Edit</a>
                           <a href="#" className="card-footer-item">Delete</a>
                         </footer>
@@ -69,8 +88,3 @@ class IdeaView extends Component {
 }
 
 export default IdeaView
-//       <div>
-//     <input type="text" name="title"/>
-//     <textarea name="description"/>
-//     <button className='button is-danger'>Delete project</button>
-//   </div>

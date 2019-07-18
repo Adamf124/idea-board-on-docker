@@ -19,7 +19,7 @@ router.get('/user/:id', (req, res) => {
   res.json('user/show',{
       user: user
   })
-  console.log(individualUser)
+  console.log(user)
 })
 })
 // CREATE Route
