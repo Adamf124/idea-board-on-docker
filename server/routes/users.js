@@ -14,13 +14,13 @@ router.get('/', (req, res) => {
 })
 // SHOW Route
 router.get('/user/:id', (req, res) => {
-  User.findById(req.params.id)
-    .then((individualUser) => {
-      res.json('user/show',{
-        individualUser: individualUser
-      })
-      console.log(individualUser)
-    })
+    User.findById(req.params.id)
+.then((user) => {
+  res.json('user/show',{
+      user: user
+  })
+  console.log(individualUser)
+})
 })
 // CREATE Route
 router.post('/', (req, res) => {
@@ -58,5 +58,7 @@ router.delete('/:id', (req, res) => {
     .catch((err) => {
       console.log(err)
     })
-})
-module.exports = router;
+  })
+
+  
+  module.exports = router;

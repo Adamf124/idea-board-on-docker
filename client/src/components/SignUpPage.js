@@ -39,6 +39,7 @@ class SignupPage extends Component {
           <h1>Create a User</h1>
           <form onSubmit={this.handleSubmit}>
             <div className="field">
+
               <h3 class="label">Name</h3>
                 <input 
                 class="input"
@@ -56,8 +57,8 @@ class SignupPage extends Component {
                 class="input"
                 placeholder="Enter Username"
                 type="text"
-                name="username"
-                value={this.state.username}
+                name="userName"
+                value={this.state.userName}
                 onChange={this.handleChange}
               />
             </div>

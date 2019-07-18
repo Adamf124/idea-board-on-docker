@@ -7,19 +7,19 @@ const Schema = mongoose.Schema
 const ProjectSchema = new Schema({
   title: {
     type: String,
-    default: 'New Title'
+    default: 'New Idea'
   },
   description: {
     type: String,
-    default: 'New Description'
+    default: 'Describe it!'
   }
 })
 
 const UserSchema = new Schema({
   name: String,
-  username: String,
+  userName: String,
   email_address: String,
-  project:[ProjectSchema]
+  projects:[ProjectSchema]
 
 })
 

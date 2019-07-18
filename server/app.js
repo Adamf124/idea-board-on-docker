@@ -25,12 +25,14 @@ port = process.env.PORT || 4000;
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
+const projectsRouter = require('./routes/projects')
 
 app.use(bodyParser.json());
 
 app.use(express.static(__dirname + '/public'))
 app.use('/', indexRouter);
 app.use('/api/users', usersRouter);
+app.use('/api/:id', projectsRouter)
 app.listen(port);
 
 
