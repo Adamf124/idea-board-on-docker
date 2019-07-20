@@ -93,7 +93,10 @@ class SignupPage extends Component {
               </p>
               <p class="control">
               <Link to="/">
+                {/* eslint-disable */}
               <a class="button is-light">Cancel</a>
+                {/* eslint-enable */}
+
               </Link>
               </p>
             </div>

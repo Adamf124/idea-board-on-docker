@@ -4,7 +4,6 @@ import { Link, Switch, BrowserRouter as Router, Route } from 'react-router-dom'
 import Dashboard from './components/Dashboard'
 import LogInPage from './components/LogInPage'
 import SignUpPage from './components/SignUpPage'
-import UserPage from './components/UserPage'
 import IdeaView from './components/IdeaView';
 
 

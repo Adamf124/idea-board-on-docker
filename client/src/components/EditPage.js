@@ -94,7 +94,9 @@ import { Link, Switch, BrowserRouter as Router, Route } from 'react-router-dom'
                     </p>
                     <p class="control">
                     <Link to="/user/:id">
+                {/* eslint-disable */}
                     <a class="button is-light">Cancel</a>
+                {/* eslint-enable */}
                     </Link>
                     </p>
                 </div>
