@@ -9,7 +9,11 @@ class IdeaView extends Component {
       user: {
         userName: ''
       },
-      projects: []
+      projects: [{
+        title: '',
+        description: '',
+
+      }]
     }
   }
   
@@ -37,13 +41,15 @@ class IdeaView extends Component {
     axios.post(`/api/users/${userId}`)
     .then(res => {
       console.log(res.data)
-      const newProjects = this.state.user.projects
+      const newProjects = [...this.state.user.projects]
       newProjects.unshift(res.data)
       this.setState({projects: newProjects})
     })
   }
   deleteProject = (project) => {
-    console.log(this.state)
+    console.log(project.target.id)
+    const userId  = this.props.match.params.id
+    axios.delete(`/api/users/${userId}`)
   }
   handleChange = (project, event) => {
     const newProjects = [...this.state.user.projects]
@@ -87,7 +93,7 @@ class IdeaView extends Component {
                         {/* eslint-disable */}
                         <footer className="card-footer">
                           <a href="#" className="card-footer-item">Edit</a>
-                          <a href="#" className="card-footer-item" onClick={this.deleteProject}>Delete</a>
+                          <a href="#" id={project._id} className="card-footer-item" onClick={this.deleteProject}>Delete</a>
                           {/* eslint-enable */}
                         </footer>
                       </div>
