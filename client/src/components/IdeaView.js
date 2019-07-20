@@ -7,13 +7,9 @@ class IdeaView extends Component {
     super(props);
     this.state = {
       user: {
-        userName: 'adam'
+        userName: ''
       },
-      projects: [{
-        id: 1,
-        title: 'hello',
-        description: 'world'
-      }]
+      projects: []
     }
   }
   
@@ -37,17 +33,28 @@ class IdeaView extends Component {
     }
   }
   createProject = () => {
-      console.log('something ')
       const userId  = this.props.match.params.id
     axios.post(`/api/users/${userId}`)
     .then(res => {
-      console.log(this.state.user.project)
+      console.log(res.data)
       const newProjects = this.state.user.projects
       newProjects.unshift(res.data)
       this.setState({projects: newProjects})
     })
   }
-
+  deleteProject = (project) => {
+    console.log(this.state)
+  }
+  handleChange = (project, event) => {
+    const newProjects = [...this.state.user.projects]
+    const projects = newProjects.map((savedProject) => {
+      if (savedProject._id === project._id) {
+        savedProject[event.target.name] = event.target.value
+      }
+      return savedProject
+    })
+    this.setState({projects: projects})
+  }
   render () {
     return (
       <div>
@@ -58,24 +65,30 @@ class IdeaView extends Component {
         <div>
           {this.state.projects.map( (project, i) => {
               return (
-                    <div className='column is-one-third' key={i}>
+                    <div key={i} className='column is-one-third' >
                       <div className="card" >
                         <header className="card-header">
-                          <p className="card-header-title">{project.title}</p>
-                          <a href="#" className="card-header-icon" aria-label="more options">
-                          <span className="icon"><i className="fas fa-angle-down" aria-hidden="true"></i></span>
-                          </a>
+                          {/* <p className="card-header-title">{project.title}</p> */}
+                          <input className="input card-header-title" onChange={(event) => this.handleChange(project, event)}
+                            type="text" 
+                            name="title" 
+                            value={project.title}
+                            />
                         </header>
 
                         <div className="card-content">
-                        <div className="content">{project.description}
+                        <input onChange={(event) => this.handleChange(project, event)} className="is-large content input"
+                        type='text' 
+                        name='description'
+                        value={project.description}/>
                             <br/>
                             <time dateTime="2016-1-1">11:09 PM - 1 Jan 2016</time>
                         </div>
-                        </div>
+                        {/* eslint-disable */}
                         <footer className="card-footer">
                           <a href="#" className="card-footer-item">Edit</a>
-                          <a href="#" className="card-footer-item">Delete</a>
+                          <a href="#" className="card-footer-item" onClick={this.deleteProject}>Delete</a>
+                          {/* eslint-enable */}
                         </footer>
                       </div>
                     </div>
